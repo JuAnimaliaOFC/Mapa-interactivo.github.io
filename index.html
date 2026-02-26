@@ -135,7 +135,11 @@ function render(filtro) {
         .addTo(layerGroup)
         .bindTooltip(`<strong>${a.nombre}</strong><br><em>${a.tipo}</em>`, { permanent: false, direction: "top" });
       L.marker(bounds[0]).addTo(layerGroup)
-        .bindPopup(`<strong>${a.nombre}</strong><br><em>${a.cientifico}</em>`);
+        .bindPopup(`
+          <strong>${a.nombre}</strong><br>
+          <em>${a.cientifico}</em><br><br>
+          <img src="${a.icon}"
+               style="width:100%; max-width:220px; border-radius:10px;">
     }
   });
 }
@@ -159,3 +163,4 @@ render("todos");
 </script>
 </body>
 </html>
+
