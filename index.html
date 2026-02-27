@@ -37,21 +37,21 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 const animales = [
-  { nombre: "Mono aullador", cientifico: "Alouatta palliata", tipo: "mamifero", coords: [[-95.0, 18.5], [-94.7, 18.5], [-94.7, 18.2], [-95.0, 18.2]] icon: "icons/mono-aullador.png" },
-  { nombre: "Tucán", cientifico: "Ramphastos sulfuratus", tipo: "ave", coords: [[-92.0, 17.5], [-91.7, 17.5], [-91.7, 17.2], [-92.0, 17.2]] icon: "icons/tucan.png" },
-  { nombre: "Pavo ocelado", cientifico: "Meleagris ocellata", tipo: "ave", coords: [[-90.5, 18.5], [-90.2, 18.5], [-90.2, 18.2], [-90.5, 18.2]] icon: "icons/pavo-ocelado.png" },
-  { nombre: "Monstruo de Gila", cientifico: "Heloderma suspectum", tipo: "reptil", coords: [[-110.0, 30.0], [-109.7, 30.0], [-109.7, 29.7], [-110.0, 29.7]] icon: "icons/mounstruo-de-gila.png" },
-  { nombre: "Serpiente de cascabel de la costa oeste de México", cientifico: "Crotalus basiliscus", tipo: "reptil", coords: [[-103.7, 20.8], [-103.4, 20.8], [-103.4, 20.5], [-103.7, 20.5]] icon: "icons/serpierte-cascabel.png" },
-  { nombre: "Cacerolita de mar", cientifico: "Limulus polyphemus", tipo: "invertebrado", coords: [[-92.0, 19.0], [-91.7, 19.0], [-91.7, 18.7], [-92.0, 18.7]] icon: "icons/cacerolita-de-mar.png" },
-  { nombre: "Mariposa monarca", cientifico: "Danaus plexippus", tipo: "invertebrado", coords: [[-100.0, 19.5], [-99.7, 19.5], [-99.7, 19.2], [-100.0, 19.2]] icon: "icons/mariposa-monarca.png" },
-  { nombre: "Loro yucateco", cientifico: "Amazona xantholora", tipo: "ave", coords: [[-88.5, 20.5], [-88.2, 20.5], [-88.2, 20.2], [-88.5, 20.2]] icon: "icons/loro-yucateco.png" },
-  { nombre: "Águila real", cientifico: "Aquila chrysaetos", tipo: "ave", coords: [[-104.0, 22.5], [-103.7, 22.5], [-103.7, 22.2], [-104.0, 22.2]] icon: "icons/aguila-real.png" },
-  { nombre: "Águila arpía", cientifico: "Harpia harpyja", tipo: "ave", coords: [[-91, 16.8], [-90.7, 16.8], [-90.7, 16.5], [-91, 16.5]] icon: "icons/aguila-arpia.png" },
-  { nombre: "Cóndor de California", cientifico: "Gymnogyps californianus", tipo: "ave", coords: [[-115.6, 31.1], [-115.3, 31.1], [-115.3, 30.8], [-115.5, 30.8]] icon: "icons/condor.png" },
-  { nombre: "Lobo mexicano", cientifico: "Canis lupus baileyi", tipo: "mamifero", coords: [[-108.3, 29.3], [-108, 29.3], [-108, 29], [-108.3, 29]] icon: "icons/lobo-mexicano.png" },
-  { nombre: "Totoaba", cientifico: "Totoaba macdonaldi", tipo: "pez", coords: [[-114.5, 31.0], [-114.2, 31.0], [-114.2, 30.7], [-114.5, 30.7]] icon: "icons/totoaba.png" },
-  { nombre: "Goodeidos", cientifico: "Ameca splendens", tipo: "pez", coords: [[-104.1, 20.6], [-103.8, 20.6], [-103.8, 20.3], [-104.1, 20.3]] "icons/goodeidos.png" },
-  { nombre: "Tetra ciego", cientifico: "Astyanax mexicanus", tipo: "pez", coords: [[-99.3, 18.8], [-99, 18.8], [-99, 18.5], [-99.3, 18.5]] icon: "icons/tetra-ciego.png" },
+  { nombre: "Mono aullador", cientifico: "Alouatta palliata", tipo: "mamifero", coords: [[-95.0, 18.5], [-94.7, 18.5], [-94.7, 18.2], [-95.0, 18.2]], icon: "icons/mono-aullador.png" },
+  { nombre: "Tucán", cientifico: "Ramphastos sulfuratus", tipo: "ave", coords: [[-92.0, 17.5], [-91.7, 17.5], [-91.7, 17.2], [-92.0, 17.2]],icon: "icons/tucan.png" },
+  { nombre: "Pavo ocelado", cientifico: "Meleagris ocellata", tipo: "ave", coords: [[-90.5, 18.5], [-90.2, 18.5], [-90.2, 18.2], [-90.5, 18.2]], icon: "icons/pavo-ocelado.png" },
+  { nombre: "Monstruo de Gila", cientifico: "Heloderma suspectum", tipo: "reptil", coords: [[-110.0, 30.0], [-109.7, 30.0], [-109.7, 29.7], [-110.0, 29.7]], icon: "icons/mounstruo-de-gila.png" },
+  { nombre: "Serpiente de cascabel de la costa oeste de México", cientifico: "Crotalus basiliscus", tipo: "reptil", coords: [[-103.7, 20.8], [-103.4, 20.8], [-103.4, 20.5], [-103.7, 20.5]], icon: "icons/serpierte-cascabel.png" },
+  { nombre: "Cacerolita de mar", cientifico: "Limulus polyphemus", tipo: "invertebrado", coords: [[-92.0, 19.0], [-91.7, 19.0], [-91.7, 18.7], [-92.0, 18.7]], icon: "icons/cacerolita-de-mar.png" },
+  { nombre: "Mariposa monarca", cientifico: "Danaus plexippus", tipo: "invertebrado", coords: [[-100.0, 19.5], [-99.7, 19.5], [-99.7, 19.2], [-100.0, 19.2]], icon: "icons/mariposa-monarca.png" },
+  { nombre: "Loro yucateco", cientifico: "Amazona xantholora", tipo: "ave", coords: [[-88.5, 20.5], [-88.2, 20.5], [-88.2, 20.2], [-88.5, 20.2]], icon: "icons/loro-yucateco.png" },
+  { nombre: "Águila real", cientifico: "Aquila chrysaetos", tipo: "ave", coords: [[-104.0, 22.5], [-103.7, 22.5], [-103.7, 22.2], [-104.0, 22.2]], icon: "icons/aguila-real.png" },
+  { nombre: "Águila arpía", cientifico: "Harpia harpyja", tipo: "ave", coords: [[-91, 16.8], [-90.7, 16.8], [-90.7, 16.5], [-91, 16.5]], icon: "icons/aguila-arpia.png" },
+  { nombre: "Cóndor de California", cientifico: "Gymnogyps californianus", tipo: "ave", coords: [[-115.6, 31.1], [-115.3, 31.1], [-115.3, 30.8], [-115.5, 30.8]], icon: "icons/condor.png" },
+  { nombre: "Lobo mexicano", cientifico: "Canis lupus baileyi", tipo: "mamifero", coords: [[-108.3, 29.3], [-108, 29.3], [-108, 29], [-108.3, 29]], icon: "icons/lobo-mexicano.png" },
+  { nombre: "Totoaba", cientifico: "Totoaba macdonaldi", tipo: "pez", coords: [[-114.5, 31.0], [-114.2, 31.0], [-114.2, 30.7], [-114.5, 30.7]], icon: "icons/totoaba.png" },
+  { nombre: "Goodeidos", cientifico: "Ameca splendens", tipo: "pez", coords: [[-104.1, 20.6], [-103.8, 20.6], [-103.8, 20.3], [-104.1, 20.3]], "icons/goodeidos.png" },
+  { nombre: "Tetra ciego", cientifico: "Astyanax mexicanus", tipo: "pez", coords: [[-99.3, 18.8], [-99, 18.8], [-99, 18.5], [-99.3, 18.5]], icon: "icons/tetra-ciego.png" },
   { nombre: "Pez luna orejudo", cientifico: "Lepomis megalotis", tipo: "pez", coords: [[-102.2, 28.0], [-101.9, 28.0], [-101.9, 27.7], [-102.2, 27.7]], icon: "icons/lepomis_megalotis.png" },
   { nombre: "Catán pinto", cientifico: "Lepisosteus oculatus", tipo: "pez", coords: [[-98.5, 25.5], [-98.2, 25.5], [-98.2, 25.2], [-98.5, 25.2]], icon: "icons/lepisosteus_oculatus.png" },
   { nombre: "Charal de chapala", cientifico: "Chirostoma chapalae", tipo: "pez", coords: [[-103.5, 20.4], [-103.2, 20.4], [-103.2, 20.1], [-103.5, 20.1]], icon: "icons/chirostoma_chapalae.png" },
@@ -134,7 +134,7 @@ function render(filtro) {
       L.polygon(bounds, { color: getColor(a.tipo), fillOpacity: 0.4 })
         .addTo(layerGroup)
         .bindTooltip(`<strong>${a.nombre}</strong><br><em>${a.tipo}</em>`, { permanent: false, direction: "top" });
-      L.marker(a.coords).addTo(layerGroup)
+      L.marker(bounds[0]).addTo(layerGroup)
         .bindPopup(`
           <strong>${a.nombre}</strong><br>
           <em>${a.cientifico}</em><br><br>
@@ -164,6 +164,7 @@ render("todos");
 </script>
 </body>
 </html>
+
 
 
 
